@@ -56,9 +56,14 @@ To set up and run this project locally, follow these steps:
 ## screenshots
 Below are some screenshots of the application to give you a preview of its functionality.
 
-Homepage with product listings
+![home page](./screenshots/home.png)
+![sing-in page](./screenshots/inscrire.png)
+![sing-up](./screenshots/identifier.png)
+![users card page](./screenshots/user-card.png)
+![admin side llist of commandes](./screenshots/admin-commendes-list.png)
+![admin side adding products directly in homepage](./screenshots/admin-addproduct.png)
+![manage users](./screenshots/manage-users.png)
 
-Shopping cart overview
 
 ## Use-case-and-Class-diagrams
 
