@@ -21,7 +21,7 @@ Welcome to the **First Project PHP** repository! This project is a simple e-comm
 
 ## Introduction
 
-This project serves as a beginner-friendly PHP application that showcases fundamental PHP programming concepts and structure, tailored for an e-commerce environment. It includes essential e-commerce features, such as product listings, shopping cart functionality, and a basic checkout flow.
+This project serves as a beginner-friendly PHP application that showcases fundamental PHP programming concepts and structure, tailored for an e-commerce environment. It includes essential e-commerce features, such as product listings, shopping cart functionality.
 
 ---
 
@@ -29,7 +29,6 @@ This project serves as a beginner-friendly PHP application that showcases fundam
 
 - **Product Listings**: Display a list of products with details.
 - **Shopping Cart**: Add, update, and remove items in the cart.
-- **Checkout System**: Simulate a simple checkout process.
 - **Form Handling**: Process and validate user input.
 - **Database Integration**: Connect to a database, perform basic CRUD operations.
 
@@ -39,8 +38,7 @@ This project serves as a beginner-friendly PHP application that showcases fundam
 
 - **PHP**: Version 7.4 or later
 - **MySQL**: For database management
-   **Apache or Nginx**: Web server
-- **Composer** (optional): For dependency management
+- **wampserver**: Web server
 
 ---
 
@@ -58,9 +56,14 @@ To set up and run this project locally, follow these steps:
 ## screenshots
 Below are some screenshots of the application to give you a preview of its functionality.
 
-Homepage with product listings
+![home page](./screenshots/home.png)
+![sing-in page](./screenshots/inscrire.png)
+![sing-up](./screenshots/identifier.png)
+![users card page](./screenshots/user-card.png)
+![admin side llist of commandes](./screenshots/admin-commendes-list.png)
+![admin side adding products directly in homepage](./screenshots/admin-addproduct.png)
+![manage users](./screenshots/manage-users.png)
 
-Shopping cart overview
 
 ## Use-case-and-Class-diagrams
 
@@ -68,12 +71,13 @@ This section provides diagrams to illustrate the main interactions within the ap
 
 1. **Use Case Diagram**
 
-![Diagram showing user interactions for browsing products, adding items to cart](./daigram/usecase/phpbd Use Case diagram.png)
+![Diagram showing user interactions for browsing products, adding items to cart](./daigram/usecase/phpbd%20Use%20Case%20diagram.png)
+
 
 
 2. **Class Diagram**
 
-![Diagram illustrating the class structure used for managing products, users, and orders](./daigram/class/php ecomerce classproject1 Class diagram.png)
+![Diagram illustrating the class structure used for managing products, users, and orders](./daigram/class/php%20ecomerce%20classproject1%20Class%20diagram.png)
 
 ## License
 
