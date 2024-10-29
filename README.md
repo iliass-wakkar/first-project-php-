@@ -68,4 +68,5 @@ Shopping cart overview
 This section provides diagrams to illustrate the main interactions within the application and the structure of classes used:
 
 1. **Use Case Diagram**
+
 ***Diagram showing user interactions for browsing products, adding items to cart, and checking out***
