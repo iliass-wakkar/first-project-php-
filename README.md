@@ -68,7 +68,7 @@ This section provides diagrams to illustrate the main interactions within the ap
 
 1. **Use Case Diagram**
 
-![Diagram showing user interactions for browsing products, adding items to cart](./daigram/phpbd%20Use%20Case%20diagram.png)
+![Diagram showing user interactions for browsing products, adding items to cart](./daigram/usecase/phpbd%20Use%20Case%20diagram.png)
 
 
 
