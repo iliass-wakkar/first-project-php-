@@ -40,7 +40,7 @@ This project serves as a beginner-friendly PHP application that showcases fundam
 
 - **PHP**: Version 7.4 or later
 - **MySQL**: For database management
-- **Apache or Nginx**: Web server
+   **Apache or Nginx**: Web server
 - **Composer** (optional): For dependency management
 
 ---
@@ -52,3 +52,20 @@ To set up and run this project locally, follow these steps:
 1. **Clone the Repository**:
    ```bash
    git clone https://github.com/iliass-wakkar/first-project-php.git
+
+## usage
+- **Add Products to the Shopping Cart**: Browse and add items to your cart.
+- **View and Update Cart**: Check cart contents, update quantities, or remove items.
+## screenshots
+Below are some screenshots of the application to give you a preview of its functionality.
+
+Homepage with product listings
+
+Shopping cart overview
+
+## use-case-and-class-diagrams
+
+This section provides diagrams to illustrate the main interactions within the application and the structure of classes used:
+
+1. **Use Case Diagram**
+***Diagram showing user interactions for browsing products, adding items to cart, and checking out***
