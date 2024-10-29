@@ -1,0 +1,32 @@
+# First Project PHP
+
+Welcome to the First Project PHP repository! This project is a simple PHP application designed to demonstrate basic PHP functionalities and best practices.
+
+## Table of Contents
+
+- [Introduction](#introduction)
+- [Features](#features)
+- [Installation](#installation)
+- [Usage](#usage)
+- [Contributing](#contributing)
+- [License](#license)
+- [Contact](#contact)
+
+## Introduction
+
+This project is a beginner-friendly PHP application that showcases the fundamental concepts of PHP programming. It includes examples of variables, functions, loops, and more.
+
+## Features
+
+- Basic PHP syntax and structure
+- Examples of common PHP functions
+- Simple form handling
+- Database connection and queries
+
+## Installation
+
+To get started with this project, follow these steps:
+
+1. Clone the repository:
+   ```bash
+   git clone https://github.com/iliass-wakkar/first-project-php-.git
