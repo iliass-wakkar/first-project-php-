@@ -68,11 +68,12 @@ This section provides diagrams to illustrate the main interactions within the ap
 
 1. **Use Case Diagram**
 
-***Diagram showing user interactions for browsing products, adding items to cart***
+![Diagram showing user interactions for browsing products, adding items to cart](./daigram/usecase/phpbd Use Case diagram.png)
+
 
 2. **Class Diagram**
 
-***Diagram illustrating the class structure used for managing products, users, and orders***
+![Diagram illustrating the class structure used for managing products, users, and orders](./daigram/class/php ecomerce classproject1 Class diagram.png)
 
 ## License
 
@@ -82,8 +83,8 @@ This project is licensed under the Apache License Version 2.0 - see the LICENSE 
 
 Created by Iliass Wakkar - feel free to reach out for collaboration or questions!
 
-. Email: iliasswakkar.wip@gmail.com
-. GitHub: @iliass-wakkar
+- Email: iliasswakkar.wip@gmail.com
+- GitHub: @iliass-wakkar
 
 
 
