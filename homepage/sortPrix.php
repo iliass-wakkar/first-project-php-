@@ -1,0 +1,9 @@
+<?php
+session_start();
+if(isset($_SESSION['sortprix'])and$_SESSION['sortprix']=='DESC')
+$_SESSION['sortprix']='ASC';
+else
+$_SESSION['sortprix']='DESC';
+$_SESSION['sortBy']='prix';
+header('location:homepage.php#product-list');
+?>
