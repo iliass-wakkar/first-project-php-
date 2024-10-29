@@ -55,14 +55,27 @@ To set up and run this project locally, follow these steps:
 - **View and Update Cart**: Check cart contents, update quantities, or remove items.
 ## screenshots
 Below are some screenshots of the application to give you a preview of its functionality.
+### Home Page or Products Page
+![Home Page](./screenshots/home.png)
 
-![home page](./screenshots/home.png)
-![sing-in page](./screenshots/inscrire.png)
-![sing-up](./screenshots/identifier.png)
-![users card page](./screenshots/user-card.png)
-![admin side llist of commandes](./screenshots/admin-commendes-list.png)
-![admin side adding products directly in homepage](./screenshots/admin-addproduct.png)
-![manage users](./screenshots/manage-users.png)
+### Sign-In Page
+![Sign-In Page](./screenshots/inscrire.png)
+
+### Sign-Up
+![Sign-Up](./screenshots/identifier.png)
+
+### User Card Page
+![User Card Page](./screenshots/user-card.png)
+
+### Admin Commandes List
+![Admin Side List of Commandes](./screenshots/admin-commandes-list.png)
+
+### Add Product 
+![Admin Side Adding Products](./screenshots/admin-addproduct.png)
+
+### Manage Users Page
+![Manage Users](./screenshots/manage-users.png)
+
 
 
 ## Use-case-and-Class-diagrams
