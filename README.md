@@ -21,7 +21,7 @@ Welcome to the **First Project PHP** repository! This project is a simple e-comm
 
 ## Introduction
 
-This project serves as a beginner-friendly PHP application that showcases fundamental PHP programming concepts and structure, tailored for an e-commerce environment. It includes essential e-commerce features, such as product listings, shopping cart functionality, and a basic checkout flow.
+This project serves as a beginner-friendly PHP application that showcases fundamental PHP programming concepts and structure, tailored for an e-commerce environment. It includes essential e-commerce features, such as product listings, shopping cart functionality.
 
 ---
 
@@ -29,7 +29,6 @@ This project serves as a beginner-friendly PHP application that showcases fundam
 
 - **Product Listings**: Display a list of products with details.
 - **Shopping Cart**: Add, update, and remove items in the cart.
-- **Checkout System**: Simulate a simple checkout process.
 - **Form Handling**: Process and validate user input.
 - **Database Integration**: Connect to a database, perform basic CRUD operations.
 
@@ -39,8 +38,7 @@ This project serves as a beginner-friendly PHP application that showcases fundam
 
 - **PHP**: Version 7.4 or later
 - **MySQL**: For database management
-   **Apache or Nginx**: Web server
-- **Composer** (optional): For dependency management
+- **wampserver**: Web server
 
 ---
 
