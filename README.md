@@ -12,6 +12,7 @@ Welcome to the **First Project PHP** repository! This project is a simple e-comm
 - [Installation](#installation)
 - [Usage](#usage)
 - [Screenshots](#screenshots)
+- [Use Case and Class Diagrams](#use-case-and-class-diagrams)
 - [Contributing](#contributing)
 - [License](#license)
 - [Contact](#contact)
