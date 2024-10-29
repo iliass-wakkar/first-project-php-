@@ -13,7 +13,6 @@ Welcome to the **First Project PHP** repository! This project is a simple e-comm
 - [Usage](#usage)
 - [Screenshots](#screenshots)
 - [Use Case and Class Diagrams](#use-case-and-class-diagrams)
-- [Contributing](#contributing)
 - [License](#license)
 - [Contact](#contact)
 - [Acknowledgments](#acknowledgments)
@@ -53,7 +52,7 @@ To set up and run this project locally, follow these steps:
    ```bash
    git clone https://github.com/iliass-wakkar/first-project-php.git
 
-## usage
+## Usage
 - **Add Products to the Shopping Cart**: Browse and add items to your cart.
 - **View and Update Cart**: Check cart contents, update quantities, or remove items.
 ## screenshots
@@ -63,10 +62,28 @@ Homepage with product listings
 
 Shopping cart overview
 
-## use-case-and-class-diagrams
+## Use-case-and-Class-diagrams
 
 This section provides diagrams to illustrate the main interactions within the application and the structure of classes used:
 
 1. **Use Case Diagram**
 
-***Diagram showing user interactions for browsing products, adding items to cart, and checking out***
+***Diagram showing user interactions for browsing products, adding items to cart***
+
+2. **Class Diagram**
+
+***Diagram illustrating the class structure used for managing products, users, and orders***
+
+## License
+
+This project is licensed under the Apache License Version 2.0 - see the LICENSE file for details.
+
+## Contact
+
+Created by Iliass Wakkar - feel free to reach out for collaboration or questions!
+
+. Email: iliasswakkar.wip@gmail.com
+. GitHub: @iliass-wakkar
+
+
+
