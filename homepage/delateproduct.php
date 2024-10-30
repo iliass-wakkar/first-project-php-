@@ -6,7 +6,7 @@ $pdo=conx();
 $product=new products();
 $product_id=$_POST['id_product'];
 $res=$product->deleteProduct($pdo,$product_id);
-header('location:homepage.php');
+header('location:index.php');
 }
 
 

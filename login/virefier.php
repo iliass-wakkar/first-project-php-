@@ -38,7 +38,7 @@ if($res['message']==0){
         $count=$cart->count_cart($conx, $_SESSION['id_client']);
         $_SESSION["cart"] = "<a href='../card/cart.php'><i class='px-3 fa-solid fa-cart-shopping'><span class='badge bg-danger rounded-circle'>
 <span class='small'>".$count."</span></span></i></a>";
-        header('location:../homepage/homepage.php');
+        header('location:../homepage/index.php');
         exit();}
     if($res['user_type']=='Admin'){
         $admin=new Admin();
@@ -49,7 +49,7 @@ if($res['message']==0){
         $_SESSION["commandlist"] = "<a href='../commandlist/commandlist.php'><i class='fa-solid fa-basket-shopping'><span class='badge bg-danger rounded-circle'>
 <span class='small'>".$nbc."</span></span></i></a>";
         $_SESSION['admin'] = "<a class='nav-link dropdown-toggle' href='#' role='button' data-bs-toggle='dropdown' aria-expanded='false'>bonjour ".$ad1['nom']."</a>";
-        header('location:../homepage/homepage.php');
+        header('location:../homepage/index.php');
         exit();
     }
 

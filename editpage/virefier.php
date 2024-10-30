@@ -41,6 +41,6 @@ unset($_SESSION['product_id']);
                 $dateCreation = date('Y-m-d H:i:s');
     $product=new products();
     $product->updateProduct($conx,$product_id,$nom,$prix,$discount,$category,$quantity,$image_url);
-    header('location:../homepage/homepage.php');
+    header('location:../homepage/index.php');
 
 ?>

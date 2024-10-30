@@ -15,7 +15,7 @@ else $product_id =null;
 
 if (!$product_id) {
     // Handle the case where no product ID is provided, redirect or show an error message
-    header('location:../homepage/homepage.php');
+    header('location:../homepage/index.php');
 }
 $products = new products;
 $cart=new cart;

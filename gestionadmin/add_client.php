@@ -7,7 +7,7 @@ $pdo = conx();
 session_start();
 if (!isset($_SESSION['admin'])) {
     // Redirect to home page or access denied page
-    header('Location: ../homepage/homepage.php');
+    header('Location: ../homepage/index.php');
     exit(); // Stop further execution
 }
 

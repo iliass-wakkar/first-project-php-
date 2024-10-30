@@ -5,5 +5,5 @@ $_SESSION['sortdate']='ASC';
 else
 $_SESSION['sortdate']='DESC';
 $_SESSION['sortBy']='dateCreation';
-header('location:homepage.php#product-list');
+header('location:index.php#product-list');
 ?>

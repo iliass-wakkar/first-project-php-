@@ -35,6 +35,6 @@ $conx=conx();
                 $dateCreation = date('Y-m-d H:i:s');
     $product=new products();
     $product->insrt_product($conx,$nom,$prix,$discount,$category,$dateCreation,$quantity,$image_url);
-    header('location:../homepage/homepage.php');
+    header('location:../homepage/index.php');
 
 ?>

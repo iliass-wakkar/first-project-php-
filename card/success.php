@@ -15,7 +15,7 @@
                 <div class="alert alert-success mt-5" role="alert">
                     Your purchase was successful!
                 </div>
-                <p><a href="../homepage/homepage.php" class="btn btn-primary">Continue Shopping</a></p>
+                <p><a href="../homepage/index.php" class="btn btn-primary">Continue Shopping</a></p>
             </div>
         </div>
     </div>

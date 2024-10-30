@@ -5,5 +5,5 @@ $_SESSION['sortprix']='ASC';
 else
 $_SESSION['sortprix']='DESC';
 $_SESSION['sortBy']='prix';
-header('location:homepage.php#product-list');
+header('location:index.php#product-list');
 ?>
