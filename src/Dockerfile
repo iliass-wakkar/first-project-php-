@@ -1,8 +1,12 @@
 # Use an official PHP image with Apache
 FROM php:8.1-apache
 
-# Set the working directory inside the container to /var/www/html/homepage
-WORKDIR /var/www/html/homepage
+# Set the working directory inside the container
+WORKDIR /var/www/html
+
+# Install necessary extensions and dependencies
+RUN apt-get update && apt-get install -y libpq-dev \
+    && docker-php-ext-install pdo pdo_pgsql pgsql
 
 # Copy the content of the 'homepage' directory into the container's working directory
 COPY . /var/www/html/
