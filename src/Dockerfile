@@ -5,7 +5,7 @@ FROM php:8.1-apache
 WORKDIR /var/www/html/homepage
 
 # Copy the content of the 'homepage' directory into the container's working directory
-COPY homepage/ /var/www/html/homepage
+COPY COPY . /var/www/html/
 
 # Expose port 80 to allow external access to the service
 EXPOSE 80
