@@ -22,7 +22,7 @@ session_start();
     top: 0;
     left: 0;
     background-size: cover;
-    background-image: url('background.jpg');
+    background-image: url('background.webp');
     /* Center the background vertically and horizontally */
     background-position: center;
     /* Ensure the background doesn't repeat */
