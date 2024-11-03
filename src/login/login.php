@@ -1,12 +1,12 @@
 <!DOCTYPE html>
 <html lang="fr">
 <?php
-define('ROOT_PATH', __DIR__ . '../');
- include_once(ROOT_PATH."src/head/head.php") ?>
+define('ROOT_PATH', __DIR__ . '/../');
+ include_once(ROOT_PATH."head/head.php") ?>
 
 <body>
 <?php
-require_once(ROOT_PATH."src/nav/nav.php");
+require_once(ROOT_PATH."nav/nav.php");
 ?>
     <div class="my-4 mx-auto div_size" style="width: 33.33%" >
     <fieldset class="border border-2 border-gray p-2 my-4 mx-auto bg-light" >
