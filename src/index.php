@@ -4,7 +4,7 @@ require_once('head/head.php'); ?>
 <body>
   <header>
     <?php
-    require_once(ROOT_PATH . 'nav/nav.php') ?>
+    require_once('nav/nav.php') ?>
   </header>
   <div class="cover-title shadow img_bg ">
     <h4 class="cost_txt">Tout ce dont vous avez besoin avec une haute qualité et un bon prix</h4>
