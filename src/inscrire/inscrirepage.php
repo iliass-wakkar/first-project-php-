@@ -1,9 +1,12 @@
 <!DOCTYPE html>
 <html lang="fr">
-<?php include_once("../head/head.php") ?>
+<?php
+define('ROOT_PATH', __DIR__ . '/../../');
+include_once(ROOT_PATH."src/head/head.php");
+ ?>
 <body>
 <?php
-require_once("../nav/nav.php");
+require_once(ROOT_PATH."src/nav/nav.php");
 ?>
     <fieldset class="border border-2 border-gray p-2 my-4 mx-auto bg-light"style="width: 33.33%" >
         <legend class="w-auto fs-2">Créer un compte</legend>

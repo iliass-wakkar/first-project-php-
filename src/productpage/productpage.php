@@ -1,8 +1,9 @@
 <!DOCTYPE html>
 <html lang="en">
-<?php include_once("../head/head.php");
+<?php define('ROOT_PATH', __DIR__ . '/../../');
+include_once(ROOT_PATH."src/head/head.php");
 
-require_once('../functions/functions.php');
+require_once(ROOT_PATH."src/functions/functions.php");
 
 $pdo =conx();
 if(isset($_GET['product_id']))

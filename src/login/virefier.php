@@ -2,7 +2,7 @@
 session_start();
 foreach($_POST as $key => $val){
     if($key=='login') continue;}
-    require_once("../functions/functions.php");
+    require_once(ROOT_PATH . "src/functions/functions.php");
     $conx=conx();
 $email=$_POST['email'];
 $password=$_POST['password'];

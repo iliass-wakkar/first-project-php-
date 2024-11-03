@@ -14,7 +14,7 @@ foreach($_POST as $key => $val){
 }
     
 
-require_once('../functions/functions.php');
+require_once(ROOT_PATH."src/functions/functions.php");
 $conx=conx();
 $product_id=$_SESSION['product_id'];
 $products=new products;

@@ -1,11 +1,12 @@
 
 <!DOCTYPE html>
 <html lang="en">
-<?php include_once("../head/head.php") ?>
+<?php define('ROOT_PATH', __DIR__ . '/../../');
+ include_once(ROOT_PATH."src/head/head.php") ?>
 <body>
     <header>
     <?php
-require_once("../nav/nav.php");
+require_once(ROOT_PATH."src/nav/nav.php");
 ?>
 <fieldset class="border rounded-3 border-2 border-gray p-2 my-4 mx-auto bg-light"style="width: 33.33%" >
         <legend class="w-auto fs-2">add Product</legend>
@@ -34,7 +35,7 @@ require_once("../nav/nav.php");
         <label for="category_id" class="form-label">Category:</label>
         <select class="form-select" id="category_nom" name="category_nom" required>
             <?php
-            require_once("../functions/functions.php");
+            require_once(ROOT_PATH."src/functions/functions.php");
             // Connect to the database to fetch categories (replace database credentials with your own)
             $pdo = conx();
             $cat = new category();

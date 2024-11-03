@@ -1,11 +1,13 @@
 
 <!DOCTYPE html>
 <html lang="en">
-<?php include_once("../head/head.php") ?>
+<?php define('ROOT_PATH', __DIR__ . '/../../');
+
+include_once(ROOT_PATH."src/head/head.php") ?>
 <body>
 <?php
-require_once("../nav/nav.php");
-require_once("../functions/functions.php");
+require_once(ROOT_PATH."src/nav/nav.php");
+require_once(ROOT_PATH . "src/functions/functions.php");
 $product_id=$_POST['id_product'];
 $pdo = conx();
 $products = new products();

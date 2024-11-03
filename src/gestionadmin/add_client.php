@@ -1,6 +1,6 @@
 <?php
-// Include necessary files and establish a database connection
-require_once('../functions/functions.php');
+define('ROOT_PATH', __DIR__ . '/../../');
+require_once(ROOT_PATH."src/functions/functions.php");
 $pdo = conx();
 
 // Check if the user is logged in and is an admin

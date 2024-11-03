@@ -1,6 +1,6 @@
 <?php 
 
-require_once('../functions/functions.php');
+require_once(ROOT_PATH.'src/functions/functions.php');
 if(isset($_SESSION['sortBy'])and$_SESSION['sortBy']=='prix'and isset($_SESSION['sortprix'])){
 
     $sortOrder=$_SESSION['sortprix'];

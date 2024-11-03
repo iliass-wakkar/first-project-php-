@@ -1,7 +1,7 @@
 
 <?php
 
-require_once('../functions/functions.php');
+require_once(ROOT_PATH."src/functions/functions.php");
 
 $pdo = conx();
 $products = new products();

@@ -11,7 +11,7 @@ foreach($_POST as $key => $val){
     }
     
 }
-require_once('../functions/functions.php');
+require_once(ROOT_PATH."src/functions/functions.php");
 $conx=conx();
     $nom = $_POST["name"];
     $prix = $_POST["price"];
