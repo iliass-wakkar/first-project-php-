@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html lang="fr">
 <?php
-define('ROOT_PATH', __DIR__ . '/../../');
+define('ROOT_PATH', __DIR__ . '../');
  include_once(ROOT_PATH."src/head/head.php") ?>
 
 <body>
