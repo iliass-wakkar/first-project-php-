@@ -53,7 +53,7 @@
         <input name="searchval" class="form-control me-2" type="search" placeholder="Search" aria-label="Search">
         <button name="search" class="btn btn-outline-success" type="submit">Search</button>
       </form>
-      </ul><?php require_once(ROOT_PATH.'src/functions/functions.php');
+      </ul><?php require_once(ROOT_PATH.'functions/functions.php');
       $cart=new cart;
         
       if(isset($_SESSION['admin'])){
