@@ -9,7 +9,7 @@ RUN apt-get update && apt-get install -y libpq-dev \
     && docker-php-ext-install pdo pdo_pgsql pgsql
 
 # Copy the content of the 'homepage' directory into the container's working directory
-COPY src /var/www/html/
+COPY ./src /var/www/html/
 
 # Expose port 80 to allow external access to the service
 EXPOSE 80
