@@ -8,13 +8,13 @@ WORKDIR /var/www/html
 RUN apt-get update && apt-get install -y libpq-dev \
     && docker-php-ext-install pdo pdo_pgsql pgsql
 
-# Copy the content of the 'homepage' directory into the container's working directory
-COPY ./src /var/www/html/
+# Copy the content of the 'src' directory into the container's working directory
+COPY src/ /var/www/html/
 
 # Expose port 80 to allow external access to the service
 EXPOSE 80
 
-# Update Apache configuration to serve files from the 'homepage' directory
+# Update Apache configuration to serve files from the root directory
 RUN echo "DocumentRoot /var/www/html" > /etc/apache2/sites-available/000-default.conf
 
 # Enable Apache rewrite module (optional, useful if you use URL rewriting in your PHP app)
