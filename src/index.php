@@ -1,4 +1,4 @@
-<?php define('ROOT_PATH', __DIR__ );
+<?php define('ROOT_PATH', __DIR__ .'/');
 require_once(ROOT_PATH.'head/head.php'); ?>
 
 <body>
