@@ -1,12 +1,12 @@
 <?php
-define('ROOT_PATH', __DIR__ . '/../../');
+$ROOT_path = '../';
 
 // Enable error reporting
 error_reporting(E_ALL);
 ini_set('display_errors', 1);
 
 // Include necessary files and establish a database connection
-require_once(ROOT_PATH."src/functions/functions.php");
+require_once($ROOT_path."src/functions/functions.php");
 $pdo = conx();
 
 // Check if the user is logged in and get the client ID

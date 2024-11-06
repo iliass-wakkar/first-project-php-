@@ -1,14 +1,15 @@
 <!DOCTYPE html>
 <html lang="en">
-<?php define('ROOT_PATH', __DIR__ . '/../../');
+<?php $ROOT_path = '../';
 
-require_once(ROOT_PATH.'src/head/head.php') ?>
+
+require_once($ROOT_path.'head/head.php') ?>
 <body style='background-color: #ebebeb' >
-    <?php require_once(ROOT_PATH.'src/nav/nav.php')?>
+    <?php require_once($ROOT_path.'nav/nav.php')?>
     <?php
 
 // Include necessary files and establish a database connection
-require_once(ROOT_PATH . "src/functions/functions.php");
+require_once($ROOT_path . "functions/functions.php");
 $pdo = conx();
 $command=new command;
 

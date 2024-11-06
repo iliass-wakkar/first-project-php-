@@ -1,6 +1,6 @@
 <?php
 session_start();
-require_once(ROOT_PATH."src/functions/functions.php");
+require_once($ROOT_path."functions/functions.php");
 
 if (isset($_POST['date']) and isset($_SESSION['id_client'])) {
     $pdo = conx();

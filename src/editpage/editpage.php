@@ -1,13 +1,13 @@
 
 <!DOCTYPE html>
 <html lang="en">
-<?php define('ROOT_PATH', __DIR__ . '/../../');
+<?php $ROOT_path = '../';
 
-include_once(ROOT_PATH."src/head/head.php") ?>
+include_once($ROOT_path."head/head.php") ?>
 <body>
 <?php
-require_once(ROOT_PATH."src/nav/nav.php");
-require_once(ROOT_PATH . "src/functions/functions.php");
+require_once($ROOT_path."nav/nav.php");
+require_once($ROOT_path . "functions/functions.php");
 $product_id=$_POST['id_product'];
 $pdo = conx();
 $products = new products();

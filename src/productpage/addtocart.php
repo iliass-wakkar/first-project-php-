@@ -1,6 +1,6 @@
 <?php
 session_start();
-require_once(ROOT_PATH."src/functions/functions.php");
+require_once($ROOT_path."functions/functions.php");
 $pdo=conx();
 $id_product=$_SESSION['id_product'];
 $quantity=$_POST['quantity'];

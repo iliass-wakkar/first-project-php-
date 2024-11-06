@@ -1,11 +1,12 @@
 <!DOCTYPE html>
 <html lang="en">
-<?php define('ROOT_PATH', __DIR__ . '/../../');
-include_once(ROOT_PATH."src/head/head.php") ?>
+<?php
+$ROOT_path = '../';
+include_once($ROOT_path."head/head.php") ?>
 <body>
     <header>
     <?php
-require_once(ROOT_PATH."src/nav/nav.php");
+require_once($ROOT_path."nav/nav.php");
 ?>
     </header>
     
@@ -32,7 +33,7 @@ require_once(ROOT_PATH."src/nav/nav.php");
                 <select class="form-select" id="category_nom" name="category_nom">
                 <option value="Select an option"> Select an option</option>
                                     <?php
-                                    require_once(ROOT_PATH . "src/functions/functions.php");
+                                    require_once($ROOT_path . "functions/functions.php");
                                     // Connect to the database to fetch categories (replace database credentials with your own)
                                     $pdo =conx();
                                     $cat=new category();

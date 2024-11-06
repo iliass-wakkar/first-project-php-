@@ -1,7 +1,7 @@
 <?php
 session_start();
 if(isset($_POST['id_product'])){
-    require_once('../functions/functions.php');
+    require_once($ROOT_path.'functions/functions.php');
 $pdo=conx();
 $product=new products();
 $product_id=$_POST['id_product'];

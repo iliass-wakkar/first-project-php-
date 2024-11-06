@@ -1,7 +1,7 @@
 <?php
 session_start();
 // Include necessary files and establish a database connection
-require_once(ROOT_PATH."src/functions/functions.php");
+require_once($ROOT_path."src/functions/functions.php");
 $command=new command;
 $cart=new cart;
 $id_client=$_SESSION['id_client'];

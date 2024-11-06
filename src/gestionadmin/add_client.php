@@ -1,6 +1,6 @@
 <?php
-define('ROOT_PATH', __DIR__ . '/../../');
-require_once(ROOT_PATH."src/functions/functions.php");
+$ROOT_path = '../';
+require_once($ROOT_path."functions/functions.php");
 $pdo = conx();
 
 // Check if the user is logged in and is an admin

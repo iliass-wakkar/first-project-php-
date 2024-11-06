@@ -1,6 +1,6 @@
 <?php
 session_start();
-require_once(ROOT_PATH."src/functions/functions.php");
+require_once($ROOT_path."functions/functions.php");
 $idc=$_SESSION['id_client'];
 // Check if the form is submitted with the deleteAllBtn
 if (isset($_POST['deleteAllBtn'])) {

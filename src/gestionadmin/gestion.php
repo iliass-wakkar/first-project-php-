@@ -2,11 +2,11 @@
 
 <!DOCTYPE html>
 <html lang="en">
-<?php define('ROOT_PATH', __DIR__ . '/../../');
-include_once(ROOT_PATH."src/head/head.php") ?>
+<?php
+$ROOT_pathinclude_once($ROOT_path."head/head.php") ?>
 <?php
 // Include necessary files and establish a database connection
-require_once(ROOT_PATH."src/functions/functions.php");
+require_once($ROOT_path."functions/functions.php");
 $pdo = conx();
 
 // Check if the user is logged in as admin
@@ -21,7 +21,7 @@ $stmt = $pdo->query("SELECT * FROM client");
 $clients = $stmt->fetchAll(PDO::FETCH_ASSOC);
 ?>
 <body>
-    <?php require_once(ROOT_PATH."src/nav/nav.php");
+    <?php require_once($ROOT_path."nav/nav.php");
  ?>
     <div class="container">
         <h2 class="mt-5 mb-3">Client Management</h2>
