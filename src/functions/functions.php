@@ -184,7 +184,7 @@ class products
             $stmt = $conx->prepare($query);
             $stmt->bindParam(':id', $id, PDO::PARAM_INT);
             $stmt->execute();
-            $products = $stmt->fetchAll(PDO::FETCH_ASSOC);
+            $products = $stmt->fetch(PDO::FETCH_ASSOC);
             return $products;
         } catch (Exception $e) {
             echo "Error: " . $e->getMessage();
