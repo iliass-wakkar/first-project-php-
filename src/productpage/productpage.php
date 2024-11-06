@@ -37,7 +37,7 @@ $reviews = [
     <div class="shadow border border-secondary-subtle border-2 bg-white container">
         <div class=" center-div shadow row row-cols-1 row-cols-md-3">
             <div class="my-6 col  g-4" style="width: 50%;">
-                <img src="<?php echo htmlspecialchars($product["image_url"]); ?>" class="img-fluid" style="width: 100%;"
+                <img src="<?php echo $ROOT_path .htmlspecialchars($product["image_url"]); ?>" class="img-fluid" style="width: 100%;"
                     alt="Product Image">
             </div>
 

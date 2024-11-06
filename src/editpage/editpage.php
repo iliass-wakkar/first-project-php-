@@ -35,7 +35,7 @@ $_SESSION['product_id']=$product_id;
                         </div>
                         <div class="form-group">
                             <label for="image" class="form-label">Image:</label>
-                            <input type="file" class="form-control-file" id="image" value="<?php echo $product['image_url']; ?>" name="image">
+                            <input type="file" class="form-control-file" id="image" value="<?php echo $ROOT_path .$product['image_url']; ?>" name="image">
                         </div>
                         <div class="mb-3">
     <label for="category_id" class="form-label">Category:</label>

@@ -288,12 +288,12 @@ CREATE TABLE IF NOT EXISTS `produit` (
 --
 
 INSERT INTO produit (id, nom, prix, discount, category, dateCreation, quantity, image_url) VALUES
-(1, 'iphone', 4000.00, 10.00, 'electronics', '2024-04-01', 25, './src/img/2.jpg'),
-(2, 'prossesor', 40020.00, 20.00, 'electronics', '2024-04-01', 20, './src/img/1.jpg'),
-(3, 'sony tv', 35000.00, 20.00, 'electronics', '2024-04-28', 40, './src/img/R.jpeg'),
-(4, 'sumsung tv', 45000.00, 10.00, 'electronics', '2024-04-28', 40, './src/img/R.jpeg'),
-(9, 'headphone', 200.00, 10.00, 'electronics', '2024-05-01', 50, './src/img/8.webp'),
-(12, 'headphone', 250.00, 10.00, 'electronics', '2024-05-03', 50, './src/img/8.webp');
+(1, 'iphone', 4000.00, 10.00, 'electronics', '2024-04-01', 25, 'img/2.jpg'),
+(2, 'prossesor', 40020.00, 20.00, 'electronics', '2024-04-01', 20, 'img/1.jpg'),
+(3, 'sony tv', 35000.00, 20.00, 'electronics', '2024-04-28', 40, 'img/R.jpeg'),
+(4, 'sumsung tv', 45000.00, 10.00, 'electronics', '2024-04-28', 40, 'img/R.jpeg'),
+(9, 'headphone', 200.00, 10.00, 'electronics', '2024-05-01', 50, 'img/8.webp'),
+(12, 'headphone', 250.00, 10.00, 'electronics', '2024-05-03', 50, 'img/8.webp');
 
 --
 -- Constraints for dumped tables

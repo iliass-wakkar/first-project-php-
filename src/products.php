@@ -23,7 +23,7 @@ $products = $products->fetchProducts($pdo, $sortBy, $sortOrder);
 
     <div class="col-5 prod_fdiv pad d-flex flex-wrap justify-content-around">
         <div class="card mb-3">
-            <img src="<?php echo $product['image_url']; ?>" class="rounded-3 img_size card-img-top" alt="Product Image">
+            <img src="<?php echo $ROOT_path .$product['image_url']; ?>" class="rounded-3 img_size card-img-top" alt="Product Image">
             <div class="card-body">
                 <h5 class="card-title"><?php echo $product['nom']; ?></h5>
                 <span class="text-danger fs-5 fw-bolder">MAD</span>

@@ -83,7 +83,7 @@ $total = $subTotal + $shipping - $savedAmount;
                                     <input type="checkbox" name="selectedProducts[]" value="<?php echo $product['id']; ?>" class="border border-secondary-subtle form-check-input productCheckbox">
                                 </div>
                                 <div class="col ml-0">
-                                    <img src="<?php echo htmlspecialchars($product['image_url']); ?>" alt="Product Image" class="img-fluid rounded-3">
+                                    <img src="<?php echo $ROOT_path .htmlspecialchars($product['image_url']); ?>" alt="Product Image" class="img-fluid rounded-3">
                                 </div>
                                 
                                 <div class="row col-md-8 d-flex justify-content-center align-items-center">
