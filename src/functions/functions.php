@@ -3,7 +3,7 @@
 function conx()
 {
     try {
-        $conx = new PDO("pgsql:host=dpg-cslmus1u0jms73f9ens0-a;dbname=ecommerce_php_jvov", "iliass", "Khc67fPPdLbGEbTSMMXmeEaw17pXG3Zf");
+        $conx = new PDO("pgsql:host=dpg-cslmus1u0jms73f9ens0-a;dbname=basic_ecommerce_php", "iliass", "r0u1rcn0WUvfLJoDs8dKgleiQojAvO4k");
     } catch (PDOException $e) {
         echo 'la connexion a échoué' . $e->getMessage();
     }
