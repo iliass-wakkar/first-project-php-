@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html lang="fr">
 <?php
-define('$ROOT_path', __DIR__ . '/../');
+$ROOT_path ='../';
  include_once($ROOT_path."head/head.php") ?>
 
 <body>
