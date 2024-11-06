@@ -1,5 +1,4 @@
-<!DOCTYPE html>
-<html lang="en">
+
 <?php
 $ROOT_path = '../';
 include_once($ROOT_path."head/head.php");
