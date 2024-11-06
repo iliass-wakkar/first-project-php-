@@ -1,4 +1,4 @@
-<?php define('ROOT_PATH', 'https://first-project-php-1.onrender.com/');
+<?php define('ROOT_PATH', __DIR__ .'/');
 define('H_PATH', __DIR__.'./' );
 require_once(ROOT_PATH.'head/head.php'); ?>
 
@@ -7,6 +7,7 @@ require_once(ROOT_PATH.'head/head.php'); ?>
     <?php
     require_once(ROOT_PATH.'nav/nav.php') ?>
   </header>
+  <?php echo ROOT_PATH ?>index.php
   <div class="cover-title shadow img_bg ">
     <h4 class="cost_txt">Tout ce dont vous avez besoin avec une haute qualité et un bon prix</h4>
     <h1 class="cost_logo " style="font-family: 'Quicksand';color: rgb(255, 255, 255)">E-com</h1>
