@@ -1,5 +1,6 @@
 <?php
 session_start();
+$ROOT_path = '../';
 require_once($ROOT_path."functions/functions.php");
 $pdo=conx();
 $id_product=$_SESSION['id_product'];
