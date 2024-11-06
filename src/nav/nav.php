@@ -9,7 +9,6 @@
       <ul class="navbar-nav me-auto mb-2 mb-lg-0">
         <li class="nav-item">
           <a class="nav-link active" aria-current="page" href="<?php echo $ROOT_path ?>index.php">Accueil</a>
-          <?php echo $ROOT_path ?>index.php
         </li>
         <?php 
     if(isset($_SESSION['client'])){
