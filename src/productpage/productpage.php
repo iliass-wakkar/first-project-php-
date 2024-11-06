@@ -1,33 +1,33 @@
-<?php $ROOT_path = './';
-require_once($ROOT_path . 'head/head.php'); 
+<?php $ROOT_path = '../';
+require_once($ROOT_path . 'head/head.php');
 
-require_once($ROOT_path."functions/functions.php");
+require_once($ROOT_path . "functions/functions.php");
 
-$pdo =conx();
-if(isset($_GET['product_id']))
-$product_id = $_GET['product_id'] ;
-elseif(isset($_SESSION['id_product'])){
-$product_id = $_SESSION['id_product'] ;
-unset($_SESSION['id_product']);
-}
-else $product_id =null;
+$pdo = conx();
+if (isset($_GET['product_id']))
+    $product_id = $_GET['product_id'];
+elseif (isset($_SESSION['id_product'])) {
+    $product_id = $_SESSION['id_product'];
+    unset($_SESSION['id_product']);
+} else
+    $product_id = null;
 
 if (!$product_id) {
-// Handle the case where no product ID is provided, redirect or show an error message
-header('location:../homepage/index.php');
+    // Handle the case where no product ID is provided, redirect or show an error message
+    header('location:../homepage/index.php');
 }
 $products = new products;
-$cart=new cart;
+$cart = new cart;
 $product = $products->fetchProductById($pdo, $product_id);
-$_SESSION['id_product']=$product["id"];
-$_SESSION['product_prix']=$product['prix'];
+$_SESSION['id_product'] = $product["id"];
+$_SESSION['product_prix'] = $product['prix'];
 ;
 
 // Placeholder reviews
 $reviews = [
-['review' => 'Great product, highly recommended!'],
-['review' => 'Good quality and fast shipping.'],
-['review' => 'I love it!'],
+    ['review' => 'Great product, highly recommended!'],
+    ['review' => 'Good quality and fast shipping.'],
+    ['review' => 'I love it!'],
 ];
 ?>
 
