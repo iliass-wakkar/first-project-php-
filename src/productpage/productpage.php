@@ -20,14 +20,14 @@ $products = new products;
 $cart = new cart;
 $product = $products->fetchProductById($pdo, $product_id);
 $_SESSION['id_product'] = $product["id"];
-$_SESSION['product_prix'] = $product['prix'];
+$_SESSION['product_prix'] = $product["prix"];
 ;
 
 // Placeholder reviews
 $reviews = [
-    ['review' => 'Great product, highly recommended!'],
-    ['review' => 'Good quality and fast shipping.'],
-    ['review' => 'I love it!'],
+    ["review" => 'Great product, highly recommended!'],
+    ["review" => 'Good quality and fast shipping.'],
+    ["review" => 'I love it!'],
 ];
 ?>
 
@@ -37,7 +37,7 @@ $reviews = [
     <div class="shadow border border-secondary-subtle border-2 bg-white container">
         <div class=" center-div shadow row row-cols-1 row-cols-md-3">
             <div class="my-6 col  g-4" style="width: 50%;">
-                <img src="<?php echo htmlspecialchars($product['image_url']); ?>" class="img-fluid" style="width: 100%;"
+                <img src="<?php echo htmlspecialchars($product["image_url"]); ?>" class="img-fluid" style="width: 100%;"
                     alt="Product Image">
             </div>
 
@@ -71,10 +71,10 @@ $reviews = [
                 <form id="productForm" method="post">
                     <div class="col-md-6">
                         <span class="text-danger fs-3 fw-bolder">MAD</span>
-                        <span class="text-danger fs-1 fw-bolder"><?php echo $product['prix']; ?></span><br>
+                        <span class="text-danger fs-1 fw-bolder"><?php echo $product["prix"]; ?></span><br>
                         <span
-                            class="old-price text-muted">MAD<?php echo $product['prix'] - ($product['prix'] * $product['discount']); ?></span>
-                        <h2><?php echo $product['nom']; ?></h2>
+                            class="old-price text-muted">MAD<?php echo $product["prix"] - ($product["prix"] * $product["discount"]); ?></span>
+                        <h2><?php echo $product["nom"]; ?></h2>
                         <!-- Display product quantity here -->
                         <p>Quantity:
                         <div class="input-group">
@@ -92,7 +92,7 @@ $reviews = [
                                 </button>
                             </span>
                         </div><br>
-                        <a href="" class="fw-bold"><?php echo $product['category']; ?></a><br><br>
+                        <a href="" class="fw-bold"><?php echo $product["category"]; ?></a><br><br>
 
                         </p>
 
@@ -121,7 +121,7 @@ $reviews = [
                 <div class="card mb-2">
                     <div class="card-body">
                         <!-- Display review content -->
-                        <p class="card-text"><?php echo htmlspecialchars($review['review']); ?></p>
+                        <p class="card-text"><?php echo htmlspecialchars($review["review"]); ?></p>
                         <!-- Display star rating (assuming it's always 5 stars) -->
                         <div class="review-rating">
                             <?php for ($i = 1; $i <= 5; $i++): ?>
@@ -137,7 +137,7 @@ $reviews = [
         document.getElementById('quantityInput').addEventListener('input', function () {
             let input = document.getElementById('quantityInput');
             let value = parseInt(input.value, 10);
-            let maxQuantity = <?php echo $product['quantity']; ?>;
+            let maxQuantity = <?php echo $product["quantity"]; ?>;
             if (value > maxQuantity) {
                 input.value = maxQuantity;
             }
@@ -145,7 +145,7 @@ $reviews = [
         document.getElementById('plusBtn').addEventListener('click', function () {
             let input = document.getElementById('quantityInput');
             let value = parseInt(input.value, 10);
-            let maxQuantity = <?php echo $product['quantity']; ?>;
+            let maxQuantity = <?php echo $product["quantity"]; ?>;
             if (value < maxQuantity) {
                 input.value = value + 1;
             }
