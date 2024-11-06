@@ -177,7 +177,20 @@ class products
             return null;
         }
     }
-
+    function fetchProductById($conx, $id)
+    {
+        try {
+            $query = "SELECT * FROM produit WHERE id = :id";
+            $stmt = $conx->prepare($query);
+            $stmt->bindParam(':id', $id, PDO::PARAM_INT);
+            $stmt->execute();
+            $products = $stmt->fetchAll(PDO::FETCH_ASSOC);
+            return $products;
+        } catch (Exception $e) {
+            echo "Error: " . $e->getMessage();
+            return null;
+        }
+    }
     function fetchProducts($conx, $sortBy, $sortOrder)
     {
         try {
