@@ -8,5 +8,5 @@ session_start();
  unset($_SESSION['cart_products']);
  unset($_SESSION['cart_products_quantity']);
  unset($_SESSION['cart_products_date']);
- header('location:../homepage/index.php')
+ header('location:'.$ROOT_path.'/index.php')
 ?>
