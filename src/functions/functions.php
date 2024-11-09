@@ -3,19 +3,25 @@
 function conx()
 {
     try {
-        $conx = new PDO("pgsql:host=dpg-cslmus1u0jms73f9ens0-a;dbname=basic_ecommerce_php", "iliass", "r0u1rcn0WUvfLJoDs8dKgleiQojAvO4k");
+        $conx = new PDO("mysql:host=sql102.infinityfree.com;dbname=if0_37676924_Basic_E_commerce", "if0_37676924", "vkamjoVooWCsbOG");
+        // Set the PDO error mode to exception
+        $conx->setAttribute(PDO::ATTR_ERRMODE, PDO::ERRMODE_EXCEPTION);
     } catch (PDOException $e) {
-        echo 'la connexion a échoué' . $e->getMessage();
+        echo 'La connexion a échoué: ' . $e->getMessage();
     }
     return $conx;
 }
+
 
 class User
 {
     function insrt_login($conx, $email, $password, $type)
     {
-        $req = "CALL insrt_login(:email,:pass,:user_type)";
-        $stmt = $conx->prepare($req);
+        $query = "INSERT INTO login (email, password, user_type)
+                  SELECT :email, :pass, :user_type
+                  FROM DUAL
+                  WHERE NOT EXISTS (SELECT 1 FROM login WHERE email = :email)";
+        $stmt = $conx->prepare($query);
         $stmt->execute(array(':email' => $email, ':pass' => $password, ':user_type' => $type));
         return $stmt->fetch(PDO::FETCH_ASSOC);
     }
@@ -30,7 +36,7 @@ class User
 
     public function fullLoginCount($conx, $email, $password)
     {
-        $query = "CALL test_login(:email,:log_password)";
+        $query = "SELECT 1 FROM login WHERE email = :email AND password = :log_password";
         $stmt = $conx->prepare($query);
         $stmt->execute(array(":email" => $email, ":log_password" => $password));
         return $stmt->fetch();
@@ -50,12 +56,16 @@ class User
     }
 }
 
+
 class Client
 {
     function insrt_client($conx, $nom, $prenom, $tel, $email, $password)
     {
-        $req = "CALL insrt_client(:nom,:prenom,:tel,:login_email,:login_password)";
-        $stmt = $conx->prepare($req);
+        $query = "INSERT INTO client (nom, prenom, tel, login_email, login_password)
+                  SELECT :nom, :prenom, :tel, :login_email, :login_password
+                  FROM DUAL
+                  WHERE NOT EXISTS (SELECT 1 FROM client WHERE login_email = :login_email)";
+        $stmt = $conx->prepare($query);
         $stmt->execute(array(':nom' => $nom, ':prenom' => $prenom, ':tel' => $tel, ':login_email' => $email, ':login_password' => $password));
         return $stmt;
     }
@@ -74,6 +84,7 @@ class Client
     }
 }
 
+
 class Admin
 {
     public function getByEmail($conx, $email)
@@ -90,12 +101,14 @@ class Admin
     }
 }
 
+
 class cart
 {
     public function insertToCart($conx, $id_client, $id_product, $quantity, $total)
     {
         try {
-            $query = "CALL inserttocart(:id_client, :id_product, :quantity, :total)";
+            $query = "INSERT INTO cart (id_client, id_product, quantity, total, date)
+                      VALUES (:id_client, :id_product, :quantity, :total, CURRENT_TIMESTAMP)";
             $stmt = $conx->prepare($query);
             $params = array(
                 ':id_client' => $id_client,
@@ -114,7 +127,9 @@ class cart
     function fetchClientProducts($conx, $clientID)
     {
         try {
-            $query = "SELECT p.*, p.id AS prod_id, p.quantity AS prod_quantity, c.*, c.quantity AS cart_quantity FROM produit p INNER JOIN cart c ON p.id = c.id_product WHERE c.id_client = :clientID";
+            $query = "SELECT p.*, p.id AS prod_id, p.quantity AS prod_quantity, c.*, c.quantity AS cart_quantity 
+                      FROM produit p INNER JOIN cart c ON p.id = c.id_product 
+                      WHERE c.id_client = :clientID";
             $stmt = $conx->prepare($query);
             $stmt->bindParam(':clientID', $clientID, PDO::PARAM_INT);
             $stmt->execute();
@@ -163,20 +178,31 @@ class cart
     }
 }
 
+
 class products
 {
     function insrt_product($conx, $nom, $prix, $discount, $category, $dateCreation, $quantity, $image_url)
     {
         try {
-            $req = "CALL insrt_product(:nom,:prix,:discount,:category,:dateCreation,:quantity,:image_url)";
-            $stmt = $conx->prepare($req);
-            $stmt->execute(array(':nom' => $nom, ':prix' => $prix, ':discount' => $discount, ':category' => $category, ':dateCreation' => $dateCreation, ':quantity' => $quantity, ':image_url' => $image_url));
+            $query = "INSERT INTO produit (nom, prix, discount, category, dateCreation, quantity, image_url) 
+                      VALUES (:nom, :prix, :discount, :category, :dateCreation, :quantity, :image_url)";
+            $stmt = $conx->prepare($query);
+            $stmt->execute(array(
+                ':nom' => $nom,
+                ':prix' => $prix,
+                ':discount' => $discount,
+                ':category' => $category,
+                ':dateCreation' => $dateCreation,
+                ':quantity' => $quantity,
+                ':image_url' => $image_url
+            ));
             return $stmt;
         } catch (PDOException $e) {
             echo "Error: " . $e->getMessage();
             return null;
         }
     }
+
     function fetchProductById($conx, $id)
     {
         try {
@@ -191,6 +217,7 @@ class products
             return null;
         }
     }
+
     function fetchProducts($conx, $sortBy, $sortOrder)
     {
         try {
@@ -257,6 +284,7 @@ class products
     }
 }
 
+
 class category
 {
     function fetchAllCategories($conx)
@@ -271,6 +299,21 @@ class category
             return null;
         }
     }
+
+    // function fetch_name($conx, $name)
+    // {
+    //     try {
+    //         $query = "SELECT * FROM produit WHERE nom = :name";
+    //         $stmt = $conx->prepare($query);
+    //         $stmt->bindParam(':name', $name, PDO::PARAM_STR);
+    //         $stmt->execute();
+    //         $products = $stmt->fetch(PDO::FETCH_ASSOC);
+    //         return $products;
+    //     } catch (Exception $e) {
+    //         echo "Error: " . $e->getMessage();
+    //         return null;
+    //     }
+    // }
 }
 
 ?>

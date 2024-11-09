@@ -37,7 +37,7 @@ require_once($ROOT_path."nav/nav.php");
                                     // Connect to the database to fetch categories (replace database credentials with your own)
                                     $pdo =conx();
                                     $cat=new category();
-                                    $result=$cat->fetch_name($pdo);
+                                    $result=$cat->fetchAllCategories($pdo);
                                     foreach ($result as $row) { 
                                         echo "<option value=" . $row["nom"] . ">" . $row["nom"] . "</option>";
                                     }
